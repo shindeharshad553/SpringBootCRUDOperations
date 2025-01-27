@@ -30,4 +30,9 @@ public class StudentController {
     public void updateStudent(@PathVariable int stud_id, @RequestBody Student s){
         ss.updateStudent(stud_id,s);
     }
+
+    @GetMapping("/getallstudents")
+    public List<Student> getAllStudent(){
+        return ss.getAllStudent();
+    }
 }
